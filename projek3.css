@@ -24,7 +24,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -65,11 +65,12 @@ h1 {
     font-size: 2rem;
     padding: 40px 20px 10px;
     color: var(--primary-xlight);
-    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 h2 {
-    color: #52B788 !important; /* override inline style yellowgreen */
+    color: #52B788 !important;
+    /* override inline style yellowgreen */
     font-size: 1.3rem;
     margin-bottom: 8px;
 }
@@ -79,14 +80,14 @@ h3 {
     margin: 10px 0 6px;
 }
 
-body > div:nth-child(2),
-body > div:nth-child(3) {
+body>div:nth-child(2),
+body>div:nth-child(3) {
     max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
 }
 
-body > div:nth-child(2) {
+body>div:nth-child(2) {
     display: grid;
     grid-template-columns: 1fr;
 }
@@ -112,7 +113,7 @@ article {
 
 article:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 article p {
@@ -120,7 +121,8 @@ article p {
 }
 
 article p[style*="dodgerblue"] {
-    color: #52B788 !important; /* override inline style dodgerblue */
+    color: #52B788 !important;
+    /* override inline style dodgerblue */
 }
 
 article a {
@@ -238,4 +240,65 @@ footer {
     color: var(--primary-xlight);
     font-size: 0.9rem;
     border-top: 1px solid rgba(82, 183, 136, 0.3);
+}
+
+/* =====================
+   RESPONSIVE - MOBILE
+   ===================== */
+
+@media (max-width: 768px) {
+
+    /* Navbar: stack links vertically & center */
+    .navbar {
+        justify-content: center;
+        padding: 12px 16px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    /* H1 ukuran lebih kecil */
+    h1 {
+        font-size: 1.4rem;
+        padding: 24px 16px 8px;
+    }
+
+    /* Div wrapper padding lebih kecil */
+    body>div:nth-child(2),
+    body>div:nth-child(3) {
+        padding: 12px 16px;
+    }
+
+    /* Main grid: 1 kolom di mobile */
+    main {
+        grid-template-columns: 1fr;
+        padding: 0 16px;
+        gap: 16px;
+    }
+
+    /* Article gambar full width */
+    article img {
+        max-width: 100%;
+        height: 180px;
+    }
+
+    /* Section paket wisata: stack vertikal */
+    section ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Aside: grid 1 kolom */
+    aside ul {
+        grid-template-columns: 1fr;
+    }
+
+    /* Video & audio full width */
+    video,
+    audio {
+        max-width: 100%;
+    }
 }
